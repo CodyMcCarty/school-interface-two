@@ -8,6 +8,9 @@ class Student(Person):
     super().__init__(name, age, password, role)
     self.school_id = school_id
 
+  def __str__(self):
+    return f"{self.name}\n{'-'*20}\nage: {self.age}\nid: {self.school_id} "
+
   @classmethod
   def objects(cls):
     students = []
@@ -20,6 +23,7 @@ class Student(Person):
         students.append(Student(**dict(row)))
     
     return students
+
 
 
 
