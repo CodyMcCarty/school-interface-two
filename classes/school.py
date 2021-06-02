@@ -8,7 +8,6 @@ class School:
     self.students = Student.objects()
 
   def list_students(self):
-    count = 0
     for i,ppl in enumerate(self.students):
       print (f'{i + 1}. {ppl.name} {ppl.school_id} ')
 
